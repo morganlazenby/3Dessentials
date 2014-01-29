@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
-//Name: camerashot1.ma
-//Last modified: Wed, Jan 29, 2014 10:11:29 AM
+//Name: camerashot1nobackground.ma
+//Last modified: Wed, Jan 29, 2014 10:12:32 AM
 //Codeset: 1252
 requires maya "2014";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOutputPass" -nodeType "mentalrayRenderPass"
@@ -167,14 +167,6 @@ createNode camera -n "cameraShape1" -p "camera1";
 	setAttr ".man" -type "string" "camera1_mask";
 	setAttr ".dr" yes;
 createNode transform -n "imagePlane1" -p "cameraShape1";
-createNode imagePlane -n "imagePlaneShape1" -p "imagePlane1";
-	setAttr -k off ".v";
-	setAttr ".fc" 76;
-	setAttr ".imn" -type "string" "C:/Users/10528146/Documents/GitHub/3Dessentials/scenes/baseball jumbotron models//location photographs/stadium-full-croppedp.png";
-	setAttr ".cov" -type "short2" 640 480 ;
-	setAttr ".s" -type "double2" 1.41732 0.94488 ;
-	setAttr ".w" 6.4;
-	setAttr ".h" 4.8000000000000007;
 createNode mentalrayItemsList -s -n "mentalrayItemsList";
 createNode mentalrayGlobals -s -n "mentalrayGlobals";
 createNode mentalrayOptions -s -n "miDefaultOptions";
@@ -438,7 +430,6 @@ select -ne :hardwareRenderingGlobals;
 select -ne :defaultHardwareRenderGlobals;
 	setAttr ".fn" -type "string" "im";
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
-connectAttr "imagePlaneShape1.msg" "cameraShape1.ip" -na;
 connectAttr ":mentalrayGlobals.msg" ":mentalrayItemsList.glb";
 connectAttr ":miDefaultOptions.msg" ":mentalrayItemsList.opt" -na;
 connectAttr ":miDefaultFramebuffer.msg" ":mentalrayItemsList.fb" -na;
@@ -451,4 +442,4 @@ relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":default
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of camerashot1.ma
+// End of camerashot1nobackground.ma
