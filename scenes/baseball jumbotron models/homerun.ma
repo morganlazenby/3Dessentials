@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
 //Name: homerun.ma
-//Last modified: Wed, Feb 05, 2014 10:22:16 AM
+//Last modified: Wed, Feb 05, 2014 10:24:32 AM
 //Codeset: 1252
 requires maya "2014";
 currentUnit -l centimeter -a degree -t film;
@@ -12,8 +12,8 @@ fileInfo "osv" "Microsoft Windows 7 Enterprise Edition, 64-bit Windows 7 Service
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.3251623735778946 14.807257746669039 26.869541962583881 ;
-	setAttr ".r" -type "double3" -12.938352729568269 -343.79999999976962 1.4490282440636938e-015 ;
+	setAttr ".t" -type "double3" 5.3326889658400569 9.3974295254582039 27.582168696189687 ;
+	setAttr ".r" -type "double3" -1.5383527295684964 -344.19999999976716 0 ;
 	setAttr ".rp" -type "double3" -4.4408920985006262e-016 -4.4408920985006262e-016 
 		-3.5527136788005009e-015 ;
 	setAttr ".rpt" -type "double3" -6.0579899530356816e-016 -1.2561689327313329e-015 
